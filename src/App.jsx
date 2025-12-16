@@ -1,17 +1,8 @@
-import Home from "./pages/home/Home";
-import "./App.css";
-import LoginForm from "./component/LoginForm";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {RouterProvider} from "react-router-dom";
+import {Router} from "./routes/Route";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={Router} />;
 }
 
 export default App;
